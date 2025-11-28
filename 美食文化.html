@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>晋城美食文化</title>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Microsoft YaHei', 'SimHei', sans-serif;
+}
+
+:root {
+    --primary: #E23437;
+    --secondary: #304DDC;
+    --accent: #98BEEA;
+    --dark: #2c3e50;
+    --light: #f8f9fa;
+    --text: #333;
+}
+
+body {
+    background: linear-gradient(135deg, #98BEEA 0%, #6A98D6 100%);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    background-attachment: fixed;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 头部样式 */
+header {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
+    color: var(--light);
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 22px;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* 导航样式 */
+.nav {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav a:hover {
+    background-color: var(--primary);
+    color: var(--light);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 主要内容区域 */
+.content {
+    padding: 40px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--dark);
+    font-size: 36px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary);
+    margin: 15px auto;
+}
+
+/* 美食展示样式 */
+.food-intro {
+    background-color: var(--light);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.food-card {
+    background-color: var(--light);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.food-img {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.food-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.food-card:hover .food-img img {
+    transform: scale(1.05);
+}
+
+.food-content {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.food-content h3 {
+    color: var(--primary);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .food-content h3 {
+        font-size: 20px;
+    }
+    
+    .food-intro {
+        font-size: 18px;
+    }
+    
+    header h1 {
+        font-size: 36px;
+    }
+    
+    header p {
+        font-size: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部区域 -->
+        <header>
+            <h1>晋城美食文化</h1>
+            <p>舌尖上的晋城，味蕾间的乡愁</p>
+        </header>
+        
+        <!-- 导航 -->
+        <div class="nav">
+         <a href="index.html">返回首页</a></div>
+        
+        <!-- 主要内容 -->
+        <div class="content">
+            <h2 class="section-title">晋城特色美食</h2>
+            
+            <div class="food-intro">
+                晋城的美食种类丰富，饸饹面、糖醋溜丸、过油肉等特色美食深受喜爱，展现了晋城的饮食文化。
+            </div>
+            
+            <div class="food-grid">
+                <!-- 清汤饸饹面 -->
+                <div class="food-card">
+                    <div class="food-img"><img src="image/图片5.jpg" width="213" height="285" alt=""/>
+                        
+                    </div>
+                    <div class="food-content">
+                        <h3>清汤饸饹面</h3>
+                    </div>
+                </div>
+                
+                <!-- 过油肉 -->
+                <div class="food-card">
+                    <div class="food-img"><img src="image/图片3.jpg" width="223" height="298" alt=""/>
+                     
+                    </div>
+                    <div class="food-content">
+                        <h3>过油肉</h3>
+                    </div>
+                </div>
+                
+                <!-- 糖醋溜丸 -->
+                <div class="food-card">
+                    <div class="food-img"><img src="image/图片4.jpg" width="233" height="312" alt=""/>
+                      
+                    </div>
+                    <div class="food-content">
+                        <h3>糖醋溜丸</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
